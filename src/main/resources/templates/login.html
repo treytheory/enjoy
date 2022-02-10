@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>Spring Security Example </title>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
+		<style>
+			img {
+ 			 	display: block;
+  				margin-left: auto;
+  				margin-right: auto;
+				}
+				h2 {text-align: center;}
+				a {text-align: center;}
+		</style>
+		
+    </head>
+    <body>
+        
+        
+        <div th:if="${param.error}">
+            Invalid username and password.
+        </div>
+        <div th:if="${param.logout}">
+            You have been logged out.
+        </div>
+        
+
+        <div class="container">
+        <div class = "card">
+        <div class = "card-body">
+        <div class="wrapper fadeInDown">
+ 		<div id="formContent">
+    	<!-- Tabs Titles -->
+		<h2>Fortes Domestic Travel</h2>
+   		<!-- Icon -->
+    	<div class="fadeIn first">
+     	<img src="https://i.pinimg.com/originals/ce/d2/ed/ced2ed3eef0c45c79da8f02863073b95.jpg" width="250" height="200" alt="Flight Icon">
+    	</div>
+
+    <!-- Login Form -->
+    <div class="container">
+    <form align="center" th:action="@{/login}" method="post">
+      <input type="text" style="text-align:center" id="login" class="fadeIn second" name="username" placeholder="login">
+      <input type="text" style="text-align:center" id="password" class="fadeIn third" name="password" placeholder="password">
+      <input type="submit" class="fadeIn fourth" value="Sign In"/></br>
+      <a style="text-align:center;" class="underlineHover" href="#">Forgot Password?</a>
+    </form>
+    </div>
+	</br>
+ 
+     </div>
+    </div>
+   </div>
+ </div>
+</div>
+
+
+    </body>
+</html>
