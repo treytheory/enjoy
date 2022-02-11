@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 /*Main java class that starts the program*/
+/*Test Commit 2*/
 
 @SpringBootApplication
 public class EnjoyApplication {
